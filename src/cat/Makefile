@@ -4,18 +4,18 @@ CFLAGS=-O3 -Wall -Wextra
 SRCS=cat.c
 OBJS=$(SRCS:.c=.o)
 
-cat: $(OBJS)
-	$(CC) $(CFLAGS) -o cat $(OBJS)
+gh-test-cat: $(OBJS)
+	$(CC) $(CFLAGS) -o gh-test-cat $(OBJS)
 
 .PHONY: install
 install:
-	make cat
+	make gh-test-cat
 	mkdir -p ../../bin
-	cp cat ../../bin/gh-cat
+	cp gh-test-cat ../../bin/gh-cat
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 clean:
-	rm *.o cat
+	rm *.o gh-test-cat -f
