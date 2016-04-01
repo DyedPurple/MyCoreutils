@@ -1,5 +1,8 @@
 *.o
+*.pyc
+
 # Don't commit my binaries
 bin/*
+
 # These are my testing binaries, rather than real binaries - obviously don't want to commit these either
 gh-test-*
