@@ -13,8 +13,10 @@ for util_name in utils_to_test:
             splat = out.readline().strip().split()
             totals[0] += int(splat[0])
             totals[1] += int(splat[1])
+        sp.call(["rm", "most_recent_stats"])
     except IOError:
         print "Could not open most_recent_stats file for" , util_name
+    sp.call(["rm", "temp.stdout"])
     os.chdir('..')
 
 print "Total number of passes:" , totals[0] , "Total number of fails" , totals[1]
