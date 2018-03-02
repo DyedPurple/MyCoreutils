@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef GH_CAT_H
 #include "cat.h"
-#endif /* GH_CAT_H */
 
 void print_usage(char *prog_location) {
 	fprintf(stderr, "usage: %s file [file, ...]\n", prog_location);
